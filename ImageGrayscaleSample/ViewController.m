@@ -1,13 +1,19 @@
-## Supports
+//
+//  ViewController.m
+//  ImageGrayscaleSample
+//
+//  Created by Kalvar on 13/10/3.
+//  Copyright (c) 2013年 Kalvar. All rights reserved.
+//
 
-KRImageGrayscale supports ARC.
-
-## How To Get Started
-
-KRImageGrayscale can easy transfor image to grayscale with 4 bits, 8 bits, 16 bits, 24 bits and 32 bits.
-
-``` objective-c
+#import "ViewController.h"
 #import "KRImageGrayscale.h"
+
+@interface ViewController ()
+
+@end
+
+@implementation ViewController
 
 - (void)viewDidLoad
 {
@@ -28,16 +34,11 @@ KRImageGrayscale can easy transfor image to grayscale with 4 bits, 8 bits, 16 bi
     //32
     [_krImageGrayscale saveBmpToDeviceWithImage:[_krImageGrayscale grayscaleImageAt32Bits:_image]];
 }
-```
 
-## Version
+- (void)didReceiveMemoryWarning
+{
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
 
-KRImageGrayscale now is V0.2 beta.
-
-## License
-
-KRImageGrayscale is available under the MIT license ( or Whatever you wanna do ). See the LICENSE file for more info.
-
-## References
-
-Google, StackOverflow, Andrew Kuo, Others Coder. Thanks for their help more people.
+@end
