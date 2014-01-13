@@ -296,7 +296,7 @@ typedef struct RGBData {
     }
     
     free(sourceData);
-    
+    //Direct fetch Bytes of 4-Bits.
     sourceData = _newImageBits;
     
     if( _byteHandler )
@@ -317,6 +317,7 @@ typedef struct RGBData {
     //NSLog(@"_newImageBits : %s", _newImageBits);
     //NSLog(@"sourceData : %s", sourceData);
     
+    //Convert to NSData type.
     NSData *_sourceImageData  = [NSData dataWithBytes:sourceData length:(width * height * _bytesPerPixel)];
     
     if( _binaryDataHandler )
@@ -793,7 +794,7 @@ typedef struct RGBData {
     int h = img.size.height;
     //lon = h - lon;
     CGColorSpaceRef colorSpace = CGColorSpaceCreateDeviceRGB();
-    CGContextRef context = CGBitmapContextCreate(NULL, w, h, 4, 2 * w, colorSpace, kCGImageAlphaPremultipliedFirst);
+    CGContextRef context = CGBitmapContextCreate(NULL, w, h, 8, 4 * w, colorSpace, kCGImageAlphaPremultipliedFirst);
     CGContextDrawImage(context, CGRectMake(0, 0, w, h), img.CGImage);
     CGContextSetRGBFillColor(context, 0.0, 0.0, 1.0, 1);
     CGContextSetRGBFillColor(context, 255, 255, 255, 1);

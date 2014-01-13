@@ -33,6 +33,7 @@
     [_krImageGrayscale saveBmpToDeviceWithImage:[_krImageGrayscale transforImageNoAlphaAt24Bits:_image]];
     //32
     [_krImageGrayscale saveBmpToDeviceWithImage:[_krImageGrayscale grayscaleImageAt32Bits:_image]];
+    
 }
 
 - (void)didReceiveMemoryWarning
